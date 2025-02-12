@@ -1,2 +1,3 @@
 # ImageResize
-This website, built with Vanilla JavaScript and Tailwind CSS, offers a simple tool for resizing images. It provides a fast and user-friendly way to adjust image dimensions for various needs, ensuring a smooth and responsive experience.
+This website is built using Vanilla JavaScript and Tailwind CSS, offering a simple and intuitive tool for resizing images. Whether you need to adjust dimensions for web use, social media, or personal projects, this platform provides a quick and efficient solution. The clean and responsive design ensures a seamless experience across devices, while the power of JavaScript handles the image processing effortlessly. Explore the tool to easily resize your images with precision and ease!
+To use the tool, simply upload your image, enter the desired dimensions, and click "Resize." The processed image will be ready to download instantly.
