@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Resizer</title>
+    <link
+      href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Vazir", "ui-sans-serif", "system-ui"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="bg-gradient-to-br from-purple-100 to-pink-100 min-h-screen flex items-center justify-center p-6"
+  >
+    <div
+      class="download-container bg-white rounded-xl shadow-2xl p-8 w-full max-w-md"
+    >
+      <h2 class="text-2xl font-bold text-center mb-6 text-gray-800">
+        تغییر اندازه تصویر
+      </h2>
+
+      <div class="mb-6">
+        <label class="block w-full cursor-pointer">
+          <div
+            class="border-2 border-dashed border-purple-400 rounded-lg p-8 text-center hover:border-purple-600 transition-colors"
+          >
+            <input
+              type="file"
+              id="imageInput"
+              accept="image/*"
+              class="hidden"
+            />
+            <span class="text-gray-600"
+              >برای آپلود تصویر کلیک کنید یا فایل را اینجا رها کنید</span
+            >
+          </div>
+        </label>
+      </div>
+
+      <div id="preview-container" class="mb-6">
+        <img
+          id="preview"
+          class="hidden mx-auto rounded-lg shadow-md max-w-full"
+          style="max-height: 300px"
+        />
+      </div>
+
+      <div class="resize-controls space-y-4">
+        <div class="grid grid-cols-2 gap-4">
+          <div class="relative">
+            <label class="block text-sm font-medium text-gray-700 mb-1"
+              >عرض</label
+            >
+            <input
+              type="number"
+              id="width"
+              min="1"
+              class="block w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-purple-500 focus:border-purple-500"
+            />
+          </div>
+          <div class="relative">
+            <label class="block text-sm font-medium text-gray-700 mb-1"
+              >ارتفاع</label
+            >
+            <input
+              type="number"
+              id="height"
+              min="1"
+              class="block w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-purple-500 focus:border-purple-500"
+            />
+          </div>
+        </div>
+        <button
+          id="downloadBtn"
+          class="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium py-2 px-4 rounded-md hover:from-purple-700 hover:to-pink-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 transform transition-all duration-200 hover:scale-[1.02]"
+        >
+          دانلود
+        </button>
+      </div>
+
+      <div style="margin: 20px 0px 0px 0px;">
+        <a href="https://github.com/erfan-esmkhan/"><i class="fa fa-github"></i></a>
+        <a href="https://linkedin.com/in/erfan-esmkhani-7669182a6"><i class="fa fa-linkedin"></i></a>
+        <span style="font-weight: 800;color: blueviolet;font-size: 14px;font-family:monospace;">MADE BY ERFAN ESMKHANI</span>
+      </div>
+    </div>
+
+    <script src="uploader.js"></script>
+  </body>
+</html>
